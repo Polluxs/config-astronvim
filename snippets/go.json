@@ -1,0 +1,8 @@
+{
+    "ap": {
+        "prefix": "ap",
+        "body": [
+            "append(${1:slice}, ${0:value})"
+        ]
+    }
+}
