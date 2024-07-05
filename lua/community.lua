@@ -7,6 +7,7 @@ return {
   { import = "astrocommunity.recipes.telescope-lsp-mappings" },
   { import = "astrocommunity.editing-support.auto-save-nvim" },
   { import = "astrocommunity.pack.lua" },
+  { import = "astrocommunity.pack.json" },
   { import = "astrocommunity.pack.go" },
   { import = "astrocommunity.pack.python" },
 }
