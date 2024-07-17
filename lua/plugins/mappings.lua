@@ -10,7 +10,13 @@ return {
           -- mappings seen under group name "Buffer"
           ["<Leader>lw"] = { "<cmd>Telescope diagnostics<cr>", desc = "Diagnostics" },
           ["<Leader>bn"] = { "<cmd>tabnew<cr>", desc = "New tab" },
+
+          -- override tree with oil
           ["<Leader>e"] = { "<cmd>Oil<cr>", desc = "Oil" },
+
+          -- find projects
+          ["<Leader>fp"] = { "<cmd>Telescope neovim-project discover<cr>", desc = "Find Project" },
+          ["<Leader>fP"] = { "<cmd>Telescope neovim-project history<cr>", desc = "Find previous projects" },
         },
         t = {
           -- setting a mapping to false will disable it
