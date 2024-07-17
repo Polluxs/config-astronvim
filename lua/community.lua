@@ -3,6 +3,7 @@ return {
   "AstroNvim/astrocommunity",
   -- example of importing a plugin
   -- available plugins can be found at https://github.com/AstroNvim/astrocommunity
+  { import = "astrocommunity.file-explorer.oil-nvim" },
   { import = "astrocommunity.editing-support.rainbow-delimiters-nvim" },
   { import = "astrocommunity.recipes.telescope-lsp-mappings" },
   { import = "astrocommunity.editing-support.auto-save-nvim" },

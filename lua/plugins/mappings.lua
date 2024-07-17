@@ -10,13 +10,16 @@ return {
           -- mappings seen under group name "Buffer"
           ["<Leader>lw"] = { "<cmd>Telescope diagnostics<cr>", desc = "Diagnostics" },
           ["<Leader>bn"] = { "<cmd>tabnew<cr>", desc = "New tab" },
+          ["<Leader>e"] = { "<cmd>Oil<cr>", desc = "Oil" },
         },
         t = {
           -- setting a mapping to false will disable it
           -- ["<esc>"] = false,
         },
+        e = {},
       },
     },
+    init = function() end,
   },
   {
     "AstroNvim/astrolsp",
