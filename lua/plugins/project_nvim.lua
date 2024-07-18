@@ -10,6 +10,8 @@ return {
       "~/code/templates/*",
       "~/.config/nvim/*",
     },
+    -- Load the most recent session on startup if not in the project directory
+    last_session_on_startup = true,
   },
   init = function()
     -- enable saving the state of plugins in the session
@@ -17,7 +19,6 @@ return {
 
     -- Automatically change the workspace based on the defined project roots
     require("neovim-project").setup {
-      patterns = { ".git", "Makefile", "package.json" }, -- Patterns to detect project root
       silent_chdir = true, -- Change directory silently
     }
   end,
