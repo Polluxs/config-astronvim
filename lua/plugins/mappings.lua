@@ -6,11 +6,9 @@ return {
       mappings = {
         -- first key is the mode
         n = {
-          -- second key is the lefthand side of the map
-          -- mappings seen under group name "Buffer"
+          -- next buffer (currently only have previous buffer)
+          ["<Leader>bn"] = { "<cmd>bnext<cr>", desc = "Next buffer" },
           ["<Leader>lw"] = { "<cmd>Telescope diagnostics<cr>", desc = "Diagnostics" },
-          ["<Leader>bn"] = { "<cmd>tabnew<cr>", desc = "New tab" },
-
           -- override tree with oil
           ["<Leader>e"] = { "<cmd>Oil<cr>", desc = "Oil" },
 
