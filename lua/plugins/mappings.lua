@@ -15,6 +15,10 @@ return {
           -- find projects
           ["<Leader>fp"] = { "<cmd>Telescope neovim-project discover<cr>", desc = "Find Project" },
           ["<Leader>fP"] = { "<cmd>Telescope neovim-project history<cr>", desc = "Find previous projects" },
+
+          -- Diffview file history
+          ["<Leader>gh"] = { "<cmd>DiffviewFileHistory %<cr>", desc = "File History" },
+          ["<Leader>gH"] = { "<cmd>DiffviewFileHistory<cr>", desc = "Branch History" },
         },
         t = {
           -- setting a mapping to false will disable it
