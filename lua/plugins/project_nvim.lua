@@ -12,15 +12,11 @@ return {
     },
     -- Load the most recent session on startup if not in the project directory
     last_session_on_startup = true,
+    silent_chdir = true, -- Change directory silently
   },
   init = function()
     -- enable saving the state of plugins in the session
     vim.opt.sessionoptions:append "globals" -- save global variables that start with an uppercase letter and contain at least one lowercase letter.
-
-    -- Automatically change the workspace based on the defined project roots
-    require("neovim-project").setup {
-      silent_chdir = true, -- Change directory silently
-    }
   end,
   dependencies = {
     { "nvim-lua/plenary.nvim" },
