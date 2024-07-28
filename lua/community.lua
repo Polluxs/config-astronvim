@@ -8,6 +8,7 @@ return {
   { import = "astrocommunity.editing-support.rainbow-delimiters-nvim" },
   { import = "astrocommunity.recipes.telescope-lsp-mappings" },
   { import = "astrocommunity.editing-support.auto-save-nvim" },
+  { import = "astrocommunity.pack.full-dadbod" },
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.pack.json" },
   { import = "astrocommunity.pack.go" },

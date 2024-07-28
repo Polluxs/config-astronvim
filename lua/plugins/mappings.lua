@@ -19,6 +19,12 @@ return {
           -- Diffview file history
           ["<Leader>gh"] = { "<cmd>DiffviewFileHistory %<cr>", desc = "File History" },
           ["<Leader>gH"] = { "<cmd>DiffviewFileHistory<cr>", desc = "Branch History" },
+
+          -- Dadbod mappings (using `m` for database commands)
+          ["<Leader>mf"] = { "<cmd>DBUI<cr>", desc = "Open DBUI" },
+          ["<Leader>mq"] = { "<cmd>DBUIQuery<cr>", desc = "Run DB Query" },
+          ["<Leader>ms"] = { "<cmd>DBUIShow<cr>", desc = "Show DB Schema" },
+          ["<Leader>ml"] = { "<cmd>DBUILastQuery<cr>", desc = "Show Last Query" },
         },
         t = {
           -- setting a mapping to false will disable it
