@@ -12,3 +12,9 @@ vim.api.nvim_create_autocmd({ "VimEnter" }, {
     if arg and vim.fn.isdirectory(arg) == 1 then vim.cmd("Oil " .. arg) end
   end,
 })
+
+local map = vim.api.nvim_set_keymap
+local opts = { noremap = true, silent = true }
+
+-- clipboard fix (always paste last yanked)
+map("x", "p", '"_dP', opts)
