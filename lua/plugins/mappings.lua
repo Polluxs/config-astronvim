@@ -25,6 +25,12 @@ return {
           ["<Leader>mq"] = { "<cmd>DBUIQuery<cr>", desc = "Run DB Query" },
           ["<Leader>ms"] = { "<cmd>DBUIShow<cr>", desc = "Show DB Schema" },
           ["<Leader>ml"] = { "<cmd>DBUILastQuery<cr>", desc = "Show Last Query" },
+
+          -- Extend NeoTest
+          ["<leader>Tl"] = {
+            function() require("neotest").run.run_last { strategy = "dap" } end,
+            desc = "Debug last test",
+          },
         },
         t = {
           -- setting a mapping to false will disable it
