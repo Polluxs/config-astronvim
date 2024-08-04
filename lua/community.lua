@@ -9,6 +9,7 @@ return {
   { import = "astrocommunity.recipes.telescope-lsp-mappings" },
   { import = "astrocommunity.editing-support.auto-save-nvim" },
   { import = "astrocommunity.test.neotest" },
+  { import = "astrocommunity.pack.markdown" },
   { import = "astrocommunity.pack.full-dadbod" },
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.pack.json" },

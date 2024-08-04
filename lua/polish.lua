@@ -13,6 +13,14 @@ vim.api.nvim_create_autocmd({ "VimEnter" }, {
   end,
 })
 
+-- Automatically set file type to markdown for .md and .MD files
+vim.cmd [[
+  augroup markdown
+    autocmd!
+    autocmd BufRead,BufNewFile *.md,*.MD set filetype=markdown
+  augroup END
+]]
+
 local map = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
 
