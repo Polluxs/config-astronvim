@@ -2,9 +2,10 @@ return {
   "coffebar/neovim-project",
   opts = {
     projects = { -- define project roots
-      "~/code/vrg/*",
-      "~/code/vrg/anp/python/*",
-      "~/code/vrg/anp/go/*",
+      "~/code/vrg/anubis/*",
+      "~/code/vrg/seshat/*",
+      "~/code/vrg/try_stuff/*",
+      "~/code/vrg/scanner_rework/*",
       "~/code/pollywolly.io/*",
       "~/code/time_hacking/*",
       "~/code/templates/*",
