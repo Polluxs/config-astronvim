@@ -3,6 +3,24 @@
 -- fit in the normal config locations above can go here
 vim.opt.tabstop = 4
 vim.opt.scrolloff = 15
+vim.o.clipboard = "unnamedplus"
+vim.o.guifont = "FiraCode Nerd Font Med"
+-- increase the scale factor for readabil
+vim.g.neovide_scale_factor = 1.6
+
+-- fix go suggestions (can't use quotes directly so it's annoying)
+local lspconfig = require "lspconfig"
+lspconfig.gopls.setup {
+  capabilities = {
+    textDocument = {
+      completion = {
+        completionItem = {
+          insertTextMode = 2, -- 2 means InsertNever
+        },
+      },
+    },
+  },
+}
 
 -- Remove Neotree from the commands and replace it with Oil
 vim.api.nvim_create_autocmd({ "VimEnter" }, {
