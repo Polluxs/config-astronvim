@@ -8,19 +8,8 @@ vim.o.guifont = "FiraCode Nerd Font Med"
 -- increase the scale factor for readabil
 vim.g.neovide_scale_factor = 1.6
 
--- fix go suggestions (can't use quotes directly so it's annoying)
-local lspconfig = require "lspconfig"
-lspconfig.gopls.setup {
-  capabilities = {
-    textDocument = {
-      completion = {
-        completionItem = {
-          insertTextMode = 2, -- 2 means InsertNever
-        },
-      },
-    },
-  },
-}
+-- Remap Ctrl + N to toggle terminal mode (instead of Ctrl+\ && Ctrl+n)
+vim.api.nvim_set_keymap("t", "<C-n>", "<C-\\><C-n>", { noremap = true, silent = true })
 
 -- Remove Neotree from the commands and replace it with Oil
 vim.api.nvim_create_autocmd({ "VimEnter" }, {
