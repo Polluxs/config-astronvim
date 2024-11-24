@@ -5,7 +5,7 @@ return {
     require("chatgpt").setup {
       api_key_cmd = "gopass show -o -n /vrg/chatgpt-legacy",
       openai_params = {
-        max_tokens = 16000,
+        max_tokens = 4096,
         model = "gpt-4o-mini",
         frequency_penalty = 0, -- allow it to repeat itself (0 = no penalty)
         presence_penalty = 0, -- allow it to talk about new topic (0 = no penality to talk about new subjects)

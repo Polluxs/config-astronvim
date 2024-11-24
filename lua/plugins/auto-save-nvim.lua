@@ -2,7 +2,7 @@ return {
   {
     "auto-save.nvim",
     opt = {
-      enabled = true, -- start auto-save when the plugin is loaded (i.e. when your package manager loads it)
+      enabled = false, -- start auto-save when the plugin is loaded (i.e. when your package manager loads it)
       execution_message = {
         message = function() -- message to print on save
           return ("AutoSave: saved at " .. vim.fn.strftime "%H:%M:%S")
@@ -24,7 +24,7 @@ return {
         return false -- can't save
       end,
       write_all_buffers = true, -- write all buffers when the current one meets `condition`
-      debounce_delay = 250, -- saves the file at most every `debounce_delay` milliseconds
+      debounce_delay = 3000, -- saves the file at most every `debounce_delay` milliseconds
       callbacks = { -- functions to be executed at different intervals
         enabling = nil, -- ran when enabling auto-save
         disabling = nil, -- ran when disabling auto-save
