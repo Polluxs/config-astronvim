@@ -6,10 +6,15 @@ vim.opt.scrolloff = 15
 vim.o.clipboard = "unnamedplus"
 vim.o.guifont = "FiraCode Nerd Font Med"
 -- increase the scale factor for readabil
-vim.g.neovide_scale_factor = 1.6
+vim.g.neovide_scale_factor = 1.4
 
 -- Remap Ctrl + N to toggle terminal mode (instead of Ctrl+\ && Ctrl+n)
 vim.api.nvim_set_keymap("t", "<C-n>", "<C-\\><C-n>", { noremap = true, silent = true })
+
+-- Remap pasting to actual pasting instead of just pasting '<D-v>'
+vim.api.nvim_set_keymap("i", "<D-v>", "<C-r>+", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("c", "<D-v>", "<C-r>+", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<D-v>", '"+p', { noremap = true, silent = true })
 
 -- Remove Neotree from the commands and replace it with Oil
 vim.api.nvim_create_autocmd({ "VimEnter" }, {
