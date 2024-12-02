@@ -16,4 +16,5 @@ return {
   { import = "astrocommunity.pack.go" },
   { import = "astrocommunity.pack.python" },
   { import = "astrocommunity.pack.svelte" },
+  { import = "astrocommunity.pack.cs" },
 }
